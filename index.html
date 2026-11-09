@@ -4,74 +4,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descubre Sevilla</title>
+    <title>Sevilla - Ciudad de encanto</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fdf3e7;
-            color: #333;
-            text-align: center;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fffaf3;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #9e3426, #e67e22);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background: #762d22;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd27f;
+        }
+
+        .portada {
+            height: 430px;
+            background:
+                linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)),
+                url("https://images.unsplash.com/photo-1559386484-97dfc0e15539?w=1600")
+                center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
             padding: 20px;
         }
 
-        h1 {
-            color: #b44325;
-            font-size: 40px;
+        .portada h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
         }
 
-        p {
+        .portada p {
+            font-size: 21px;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #a33b2b;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .descripcion {
+            max-width: 850px;
+            margin: auto;
             font-size: 18px;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 20px auto;
+            line-height: 1.8;
         }
 
-        img {
-            width: 80%;
-            max-width: 700px;
-            border-radius: 12px;
-            margin: 20px;
+        .tarjetas {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .tarjeta {
+            background: white;
+            width: 280px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-8px);
+        }
+
+        .tarjeta h3 {
+            color: #c05036;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .tarjeta p {
+            line-height: 1.6;
+        }
+
+        .foto {
+            width: 90%;
+            max-width: 850px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .video {
+            background: #f7e6d5;
         }
 
         iframe {
-            width: 80%;
-            max-width: 700px;
-            height: 394px;
+            width: 90%;
+            max-width: 800px;
+            height: 450px;
             border: none;
-            border-radius: 12px;
+            border-radius: 15px;
+        }
+
+        footer {
+            background: #762d22;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            .portada h2 {
+                font-size: 34px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            iframe {
+                height: 230px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <h1>¡Bienvenidos a Sevilla!</h1>
+    <header>
+        <h1>🌞 SEVILLA 🌞</h1>
+        <p>Una ciudad llena de historia, arte y alegría</p>
+    </header>
 
-    <p>
-        Sevilla es una preciosa ciudad situada en Andalucía, al sur de España.
-        Es famosa por su historia, sus monumentos, sus calles llenas de encanto
-        y su gastronomía. Entre sus lugares más conocidos destacan la Giralda,
-        la Catedral, la Plaza de España y el Real Alcázar.
-        Además, Sevilla es conocida por su Feria de Abril y su Semana Santa.
-        ¡Una ciudad llena de cultura, alegría y tradición!
-    </p>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#historia">Historia</a>
+        <a href="#lugares">Lugares</a>
+        <a href="#video">Vídeo</a>
+    </nav>
 
-    <h2>La belleza de Sevilla</h2>
+    <div class="portada" id="inicio">
+        <h2>Descubre Sevilla</h2>
+        <p>La magia de Andalucía te espera</p>
+    </div>
 
-    <img
-        src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?w=1200"
-        alt="Vista de la ciudad de Sevilla"
-    >
+    <section id="historia">
+        <h2>❤️ Bienvenidos a Sevilla</h2>
 
-    <h2>Descubre Sevilla en vídeo</h2>
+        <p class="descripcion">
+            Sevilla es una de las ciudades más bonitas de España.
+            Situada en Andalucía, destaca por su impresionante
+            patrimonio histórico, sus monumentos, sus calles llenas
+            de encanto y su deliciosa gastronomía.
 
-    <iframe
-        src="https://www.youtube.com/embed/VIDEO_ID"
-        title="Vídeo sobre Sevilla"
-        allowfullscreen>
-    </iframe>
+            Es famosa por el flamenco, la Semana Santa y la Feria
+            de Abril. Además, el río Guadalquivir atraviesa la ciudad,
+            convirtiéndola en un lugar único y especial.
+        </p>
+    </section>
+
+    <section id="lugares">
+        <h2>📍 Lugares imprescindibles</h2>
+
+        <div class="tarjetas">
+
+            <div class="tarjeta">
+                <h3>🏰 La Giralda</h3>
+                <p>
+                    Uno de los monumentos más emblemáticos de Sevilla.
+                    Su torre es un símbolo de la ciudad.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>🌸 Plaza de España</h3>
+                <p>
+                    Una plaza espectacular con canales, puentes
+                    y preciosos bancos decorados con cerámica.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>👑 Real Alcázar</h3>
+                <p>
+                    Un impresionante palacio con jardines,
+                    patios y una arquitectura extraordinaria.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>💃 Feria de Abril</h3>
+                <p>
+                    Una fiesta llena de música, baile, trajes
+                    tradicionales y ambiente andaluz.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>📷 Una imagen de Sevilla</h2>
+
+        <img
+            class="foto"
+            src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?w=1400"
+            alt="Vista de Sevilla"
+        >
+    </section>
+
+    <section class="video" id="video">
+        <h2>🎬 Descubre Sevilla en vídeo</h2>
+
+        <p style="margin-bottom:25px;">
+            Conoce sus calles, monumentos y rincones más bonitos.
+        </p>
+
+        <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Vídeo turístico de Sevilla"
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <footer>
+        <h3>🌞 Sevilla tiene un color especial 🌞</h3>
+        <p>Descubre, disfruta y enamórate de Sevilla.</p>
+        <p>© 2026 - Página web dedicada a Sevilla</p>
+    </footer>
 
 </body>
 </html>
